@@ -4,15 +4,24 @@ import Page2 from "./pages/page2"
 import Page3 from "./pages/page3"
 import Home from "./pages/home"
 import NavMenu from "./component/NavMenu"
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 const App = () => {
     return (
     <>
-    <NavMenu/>
-       {/* <Home/>  
-       <Page1/>
-       <Page2/>
-       <Page3/> */}
+    <Router>
+        <NavMenu/>  
+        <Routes>
+            <Route path="/" element={<Home/>}>
+            </Route>
+            <Route path="/malarstwo" element={<Page1/>}>      
+            </Route>
+            <Route path="/rzezba" element={<Page2/>}>   
+            </Route>
+            <Route path="/design" element={<Page3/>}>  
+            </Route>
+        </Routes>
+    </Router>
     </>
     );
 };
