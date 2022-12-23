@@ -9,7 +9,7 @@ if (!container) throw new Error("root container not found");
 
 createRoot(container).render(
     <StrictMode>
-        <header>
+        {/* <header>
             <h1>React Photo Album | Lightbox</h1>
             <a href="https://github.com/igordanchenko/react-photo-album" target="_blank" rel="noreferrer noopener">
                 GitHub
@@ -17,7 +17,7 @@ createRoot(container).render(
             <a href="https://react-photo-album.com/" target="_blank" rel="noreferrer noopener">
                 Docs
             </a>
-        </header>
+        </header> */}
         <main>
             <App />
         </main>
