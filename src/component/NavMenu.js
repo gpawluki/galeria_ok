@@ -28,7 +28,7 @@ const NavMenuStyles = styled.div`
             display: inline-block;
             font-family: 'RobotMono Regular';
             padding: 1rem 1rem;
-            font-size: 2 rem;
+            font-size: 2rem;
             color: var(--gray-1);
             outline: none;
         }
@@ -117,7 +117,7 @@ export default function NavMenu(){
                             onKeyDown={() => SetShowNav(!showNav)}
                             tabIndex={0}
                     >
-                        Home
+                        Start
                     </NavLink>
                 </li>
                 <li>
