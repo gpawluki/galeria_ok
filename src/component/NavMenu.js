@@ -11,6 +11,14 @@ const NavMenuStyles = styled.div`
     width: 100%;
     padding: 1rem 0;
     background: var(--dark-bg);
+    display: flex;
+    /* .logo{
+        font-size: 3rem;
+        padding: 1rem 1rem;
+        margin-left: 10rem;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+    } */
+
     ul{
         max-width: 1200px;
         margin: 0 auto;
@@ -52,6 +60,9 @@ const NavMenuStyles = styled.div`
         display: none;
     }
     @media only screen and (max-width: 980px){
+        /* .logo{
+        display: hidden;
+        } */
         padding: 0;
         .hide-item{
             transform: translateY(calc(-100% - var(--top)));
@@ -93,6 +104,13 @@ export default function NavMenu(){
     const [showNav, SetShowNav] = useState(false);
     return(
         <NavMenuStyles>
+            {/* <div>
+            <NavLink to="/"
+                    className="logo"
+                    >
+                    AK
+                    </NavLink>
+            </div> */}
             <div className="mobile-menu-icon"
                 onClick={() => SetShowNav(!showNav)}
                 role="button"

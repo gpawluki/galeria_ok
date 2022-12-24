@@ -4,10 +4,10 @@ const unsplashLink = (id: string) =>
     `https://drive.google.com/uc?export=view&id=${id}`;
 
 const unsplashPhotos = [
-    {id: "1QB_yPZ6232vvJ1WTum9W6U6Owz8aK9wQ", width: 894, height: 956}, // des
-    {id: "1X2D9R-pY2alNhER2JRQOJsfi_8Is5VfF", width: 965, height: 1037}, //des
-    {id: "11Gq3QHGu8CzaAUkXAk1Q11w2WtK8qnNW", width: 1048, height: 1097}, //des
-    {id: "1uJ6UbO9PJ-RBqGekV7ZLJI7PpGia1KSm", width: 957, height: 506}, //des
+    {id: "1QB_yPZ6232vvJ1WTum9W6U6Owz8aK9wQ", width: 894,  height: 956, title: "Rzeźba", description: "Gips  "}, // des
+    {id: "1X2D9R-pY2alNhER2JRQOJsfi_8Is5VfF", width: 965, height: 1037, title: "Rzeźba", description: "Gips  "}, //des
+    {id: "11Gq3QHGu8CzaAUkXAk1Q11w2WtK8qnNW", width: 1048,height: 1097, title: "Rzeźba", description: "Gips  "}, //des
+    {id: "1uJ6UbO9PJ-RBqGekV7ZLJI7PpGia1KSm", width: 957,  height: 506, title: "Rzeźba", description: "Gips  "}, //des
 ];
 
 const getMeta = (url: string, cb) => {
@@ -37,6 +37,8 @@ const photos3 = unsplashPhotos.map((photo) => {
         src: unsplashLink(photo.id),
         width,
         height,
+        title: photo.title,
+        description: photo.description,
         images: breakpoints.map((breakpoint) => {
             const height = Math.round((photo.height / photo.width) * breakpoint);
             return {
