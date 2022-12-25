@@ -16,23 +16,33 @@ import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import './page.css';
 import photos3 from "./photos3";
+import sub_photos3 from "./subphotos3";
 
-const slides = photos3.map(({ src, width, height, title, description, images }) => ({
-    src,
-    width,
-    height,
-    title: title,
-    description: description,
-    srcSet: images.map((image) => ({
-        src: image.src,
-        width: image.width,
-        height: image.height,
-    })),
-}));
+function getSubphotos(photos_map, index){
+    const subphotos = [];
+    subphotos.push(photos3[index]);
+
+    console.log("orzedkustin");
+    console.log(photos3[index]);
+
+    for(let key of photos_map){
+        
+        key['main_id']  == index ? subphotos.push(key) : console.log("duppa"); 
+        console.log("lista")
+
+        for(let kkey of subphotos){
+            console.log(kkey)
+        }
+    }
+    return subphotos;
+}
 
 const Page3 = () => {
     const [index, setIndex] = useState(-1);
-
+    const slides = getSubphotos(sub_photos3, index);
+    // for(let key of slides){
+    //     console.log(key)
+    // }
     return (
         <>
             <div>
@@ -44,7 +54,7 @@ const Page3 = () => {
                 <Lightbox
                     slides={slides}
                     open={index >= 0}
-                    index={index}
+                    index={0}
                     close={() => setIndex(-1)}
                     // enable optional lightbox plugins
                     plugins={[Fullscreen, Slideshow, Thumbnails, Zoom, Captions]}

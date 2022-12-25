@@ -24,13 +24,9 @@ const photos2 = unsplashPhotos.map((photo) => {
       // Use like:
        getMeta(unsplashLink(photo.id), (err, img) => {
         photo.height = img.naturalHeight
-        console.log(photo.height)
-        // console.log(img.naturalWidth, img.naturalHeight);
       });
-      console.log(photo.height)
     const width = breakpoints[0];
     const height = (photo.height / photo.width) * width;
-    // console.log(photo.height)
 
 
 

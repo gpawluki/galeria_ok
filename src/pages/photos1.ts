@@ -23,7 +23,6 @@ const unsplashPhotos = [
 const photos1 = unsplashPhotos.map((photo) => {
     const width = breakpoints[0];
     const height = (photo.height / photo.width) * width;
-    // console.log(unsplashLink(photo.id))
     return {
         src: unsplashLink(photo.id),
         width,
