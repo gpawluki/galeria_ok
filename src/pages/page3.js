@@ -22,17 +22,8 @@ function getSubphotos(photos_map, index){
     const subphotos = [];
     subphotos.push(photos3[index]);
 
-    console.log("orzedkustin");
-    console.log(photos3[index]);
-
     for(let key of photos_map){
-        
         key['main_id']  == index ? subphotos.push(key) : console.log("duppa"); 
-        console.log("lista")
-
-        for(let kkey of subphotos){
-            console.log(kkey)
-        }
     }
     return subphotos;
 }
@@ -40,14 +31,9 @@ function getSubphotos(photos_map, index){
 const Page3 = () => {
     const [index, setIndex] = useState(-1);
     const slides = getSubphotos(sub_photos3, index);
-    // for(let key of slides){
-    //     console.log(key)
-    // }
+
     return (
         <>
-            <div>
-                <h3>Design</h3>
-            </div>
             <div>
                 <PhotoAlbum photos={photos3} layout="rows" targetRowHeight={150} onClick={({ index }) => setIndex(index)} />
 

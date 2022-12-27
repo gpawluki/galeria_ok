@@ -7,7 +7,7 @@ import ButtonIg from "../component/ButtonIg"
 
 import styled from 'styled-components'
 
-const HeroStyles = styled.div`
+const NisioStyles = styled.div`
     .nisio{
         height: 80vh;
         min-height: 800px;
@@ -45,6 +45,18 @@ const HeroStyles = styled.div`
         margin-top: -18rem;
     }
     @media only screen and (max-width: 980px){
+        .nisio{
+            height: 70vh;
+            min-height: 500px;
+
+        }
+
+        .container{
+            height: 100vh;
+        }
+        .nisio__img {
+            height: 100vh;
+        }
         .nisio__heading{
             font-size: 2rem;
             margin-bottom: -6.5rem;
@@ -53,8 +65,10 @@ const HeroStyles = styled.div`
                 font-size: 5rem;
                 font-family: "Montserrat Semibold";
                 color: var(--white);
-                
             }
+        }
+        .nisio__info{
+        margin-top: -14em;
         }
         
     }
@@ -62,7 +76,7 @@ const HeroStyles = styled.div`
 
 const Home = () => {
 	return (
-    <HeroStyles>
+    <NisioStyles>
         <div className="nisio">
             <div className="container">
                 <h1 className="nisio__heading">
@@ -83,7 +97,7 @@ const Home = () => {
             
         </div>
         <ButtonIg btnLink="https://www.instagram.com/chelbiv" outline={true}/>
-    </HeroStyles>
+    </NisioStyles>
 	);
 };
 

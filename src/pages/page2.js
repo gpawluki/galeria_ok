@@ -36,9 +36,6 @@ const Page2 = () => {
     return (
         <>
             <div>
-                <h3>Rzeźba </h3>
-            </div>
-            <div>
                 <PhotoAlbum photos={photos2} layout="columns" targetRowHeight={150} onClick={({ index }) => setIndex(index)} />
 
                 <Lightbox
