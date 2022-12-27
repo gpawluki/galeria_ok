@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import {MdMenu, MdClose} from 'react-icons/md'
 
 const NavMenuStyles = styled.div`
-    position:fixed;
+    position:sticky;
     z-index: 100;
     top: 0;
     left: 0;
@@ -12,12 +12,7 @@ const NavMenuStyles = styled.div`
     padding: 1rem 0;
     background: var(--dark-bg);
     display: flex;
-    /* .logo{
-        font-size: 3rem;
-        padding: 1rem 1rem;
-        margin-left: 10rem;
-        font-family: "Comic Sans MS", "Comic Sans", cursive;
-    } */
+
 
     ul{
         max-width: 1200px;
@@ -135,7 +130,7 @@ export default function NavMenu(){
                             onKeyDown={() => SetShowNav(!showNav)}
                             tabIndex={0}
                     >
-                        Start
+                        O mnie
                     </NavLink>
                 </li>
                 <li>
