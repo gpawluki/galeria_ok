@@ -46,16 +46,20 @@ const NisioStyles = styled.div`
     }
     @media only screen and (max-width: 980px){
         .nisio{
-            height: 70vh;
+            height: 60vh;
             min-height: 500px;
 
         }
 
         .container{
-            height: 100vh;
+            height: 60vh;
+            min-height: 400px;
+
         }
         .nisio__img {
-            height: 100vh;
+            height: 50vh;
+            min-height: 400px;
+
         }
         .nisio__heading{
             font-size: 2rem;
