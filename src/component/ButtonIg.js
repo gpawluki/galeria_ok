@@ -6,19 +6,18 @@ import {GrInstagram} from 'react-icons/gr'
 const ButtonStyle = styled.div`
     margin-top: 2rem;
     .button{
-        font-size: 5rem;
+        font-size: 5em;
         background-color: ${(props) =>
             props.outline ? 'transparent' : 'var(--gray-1)'};
         padding: 0.7em 0.7em;
-        border-radius: 8px;
         display: inline-block;
         color: ${(props) =>
                 props.outline ? 'var(--gray-1)' : 'black'};
     }
     @media only screen and (max-width: 980px){
-        .button{
-            font-size: 3rem;
-        }
+        /* .button{
+            font-size: 4em;
+        } */
     }
 `;
 

@@ -17,6 +17,12 @@ import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import './page.css';
 import photos1 from "./photos1";
+import styled from 'styled-components'
+
+const PhotosStyles = styled.div`
+    margin-top: 3rem;
+`;
+
 
 const slides = photos1.map(({ src, width, height, title, description, images }) => ({
     src,
@@ -35,19 +41,24 @@ const Page1 = () => {
     const [index, setIndex] = useState(-1);
 
     return (
-        <>  
-            <div>
-                <PhotoAlbum photos={photos1} layout="columns" targetRowHeight={150} onClick={({ index }) => setIndex(index)} />
+        <>     
+            <PhotosStyles> 
+                <div>
+                    <h3>Malarstwo </h3>
+                </div>
+                <div>
+                    <PhotoAlbum photos={photos1} layout="columns" targetRowHeight={150} onClick={({ index }) => setIndex(index)} />
 
-                <Lightbox
-                    slides={slides}
-                    open={index >= 0}
-                    index={index}
-                    close={() => setIndex(-1)}
-                    // enable optional lightbox plugins
-                    plugins={[Fullscreen, Slideshow, Thumbnails, Zoom, Captions]}
-                />
-            </div>
+                    <Lightbox
+                        slides={slides}
+                        open={index >= 0}
+                        index={index}
+                        close={() => setIndex(-1)}
+                        // enable optional lightbox plugins
+                        plugins={[Fullscreen, Slideshow, Thumbnails, Zoom, Captions]}
+                    />
+                </div>
+            </PhotosStyles>  
         </>
     );
 };

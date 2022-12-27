@@ -17,6 +17,12 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import './page.css';
 import photos3 from "./photos3";
 import sub_photos3 from "./subphotos3";
+import styled from 'styled-components'
+
+
+const PhotosStyles = styled.div`
+    margin-top: 3rem;
+`;
 
 function getSubphotos(photos_map, index){
     const subphotos = [];
@@ -34,7 +40,10 @@ const Page3 = () => {
 
     return (
         <>
-            <div>
+            <PhotosStyles>
+                <div>
+                    <h3>Design </h3>
+                </div>
                 <PhotoAlbum photos={photos3} layout="rows" targetRowHeight={150} onClick={({ index }) => setIndex(index)} />
 
                 <Lightbox
@@ -45,7 +54,7 @@ const Page3 = () => {
                     // enable optional lightbox plugins
                     plugins={[Fullscreen, Slideshow, Thumbnails, Zoom, Captions]}
                 />
-            </div>
+            </PhotosStyles>
         </>
     );
 };

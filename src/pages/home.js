@@ -94,7 +94,7 @@ const Home = () => {
                 </div>
                 <div className="nisio__info">
                     <PText>Nisio robi design Nisio robi design Nii</PText>
-                    <Button btnLink="/malarstwo" btnText="Moje prace"
+                    <Button btnLink="/prace" btnText="Moje prace"
                             outline={false} text={true}/>
                 </div>
             </div>
