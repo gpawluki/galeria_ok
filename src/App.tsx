@@ -2,6 +2,9 @@ import { useState } from "react";
 import Page1 from "./pages/page1"
 import Page2 from "./pages/page2"
 import Page3 from "./pages/page3"
+import Page4 from "./pages/page4"
+import Page5 from "./pages/page5"
+
 
 import Contact from "./pages/Contact"
 import Main from "./pages/Main"
@@ -20,9 +23,12 @@ const App = () => {
             <Route path="/about" element={<Home />}/>
             <Route path="/contact" element={<Contact />}/>
 
-            {/* <Route path="/malarstwo" element={<Page1/>}/>      
-            <Route path="/rzezba" element={<Page2/>}/>    */}
+            <Route path="/malarstwo" element={<Page1/>}/>      
+            <Route path="/rzezba" element={<Page2/>}/>   
             <Route path="/design" element={<Page3/>}/>  
+            <Route path="/foto" element={<Page4/>}/>  
+            <Route path="/rysunek" element={<Page5/>}/>  
+
         </Routes>
     </Router>
     </>

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { SocialIcon } from 'react-social-icons';
+import kot from "../assets/images/cat.jpg"
+
 const HomeDiv = styled.div`
     .social{
         display: flex;
@@ -89,7 +91,7 @@ function Contact() {
             <ContactInfo>Instagram: @chelbiv</ContactInfo>
         </LeftContainer>
         <RightContainer>
-            <Photo src="https://via.placeholder.com/400x600" alt="Cool photo" />
+            <Photo src={kot} alt="Cool photo" />
         </RightContainer>
         </Container>
         <span className="line">

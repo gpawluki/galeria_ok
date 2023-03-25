@@ -42,7 +42,7 @@ const NavMenuStyles = styled.div`
     p{
         font-family: 'Shrikhand', sans-serif;
 
-        width: 40%;
+        width: 100%;
         font-size: 3.5rem;
         margin-left: 5vw;
         font-weight: normal;
@@ -134,7 +134,9 @@ export default function NavMenu(){
         <NavDiv>
 
         <NavMenuStyles>
+        <a href="./">
             <p>Antonina Kacperska</p>
+        </a>
             <ul className={!showNav ? 'navItems hide-item': 'navItems'}>
                 <li>
                     <NavLink to="/"

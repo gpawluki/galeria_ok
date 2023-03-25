@@ -45,8 +45,8 @@ const PhotosStyles = styled.div`
     }  
     
     .imgCont:hover{
-        background-color: yellow;
-        transform: scaleY(1.1);
+        box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+                transform: scaleY(1.1);
         transform: scale(1.1);
         transform-origin: center;
     }
@@ -110,7 +110,7 @@ const CategoryPhotos = () => {
                         <div id="cat1" className="imgCont">
                         </div>
                     </a>
-                    <p>Ceramika</p>
+                    <p>Rzeźba</p>
                 </div>
                 <div className="container">   
                     <a href="malarstwo">
@@ -135,7 +135,7 @@ const CategoryPhotos = () => {
                     <p>Rysunek</p>
                 </div>
                 <div className="container">   
-                    <a href="photography">
+                    <a href="foto">
                         <div id="cat5" className="imgCont">
                         </div>
                     </a>
