@@ -22,6 +22,7 @@
         "react-icons": "^4.7.1",
         "react-photo-album": "^2.0.0",
         "react-router-dom": "^6.6.1",
+        "react-social-icons": "^5.15.0",
         "styled-components": "^5.3.6",
         "yet-another-react-lightbox": "^2.2.3"
     },

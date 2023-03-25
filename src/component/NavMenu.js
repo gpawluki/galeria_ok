@@ -3,8 +3,34 @@ import { NavLink } from "react-router-dom";
 import styled from 'styled-components';
 import {MdMenu, MdClose} from 'react-icons/md'
 
+const NavDiv = styled.div`
+
+    .line{
+            display:block; 
+            margin-bottom:4vh;
+            font-family: 'EB Garamond', sans-serif;
+
+    }
+    .line h2{
+            font-family: 'EB Garamond', sans-serif;
+            font-weight: normal;
+            font-size: 1.5rem;
+            text-align:center; 
+            border-bottom:1px solid var(--gray-1); 
+            position:relative; 
+    }
+    .line h2 span { 
+            background-color: var(--dark-bg); 
+            font-family: 'EB Garamond', sans-serif;
+
+            position: relative; 
+            top: 10px; 
+            padding: 0 10px;
+    }
+`;
+
 const NavMenuStyles = styled.div`
-    position:sticky;
+    /* position:sticky; */
     z-index: 100;
     top: 0;
     left: 0;
@@ -12,16 +38,26 @@ const NavMenuStyles = styled.div`
     padding: 1rem 0;
     background: var(--dark-bg);
     display: flex;
+    
+    p{
+        font-family: 'Shrikhand', sans-serif;
 
-
+        width: 40%;
+        font-size: 3.5rem;
+        margin-left: 5vw;
+        font-weight: normal;
+    }
     ul{
         max-width: 1200px;
         margin: 0 auto;
-        width: 98%;
+        width: 70%;
         text-align: center;
         li{
             display: inline-block;
             border-radius: 8px;
+            padding: 2rem;
+            padding-top: 0rem;
+            padding-bottom: 0rem;
             transition: .3s ease background-color;
             &:hover {
                 background-color: var(--deep_black);
@@ -29,100 +65,77 @@ const NavMenuStyles = styled.div`
         }
         a{
             display: inline-block;
-            font-family: 'RobotMono Regular';
-            padding: 1rem 1rem;
+            font-family: 'EB Garamond', sans-serif;
             font-size: 2rem;
+
+            padding: 1rem 1rem;
             color: var(--gray-1);
             outline: none;
+
+            /* Add margin-top to move the text down */
+            /* margin-top: 20px; */
         }
         .active {
             color: var(--white);
         }
     }
-    .mobile-menu-icon{
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
-        width: 4rem;
-        cursor: pointer;
-        display: none;
-        outline: none;
-        *{
-            pointer-events: none;
+
+    /* Add the bottom border with border lines */
+    .nav-border {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: -20px;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            border-top: 2px solid #fff;
+            top: 50%;
         }
-    }
-    .closeNavIcon{
-        display: none;
+        &:before {
+            right: 100%;
+            margin-right: 15px;
+        }
+        &:after {
+            left: 100%;
+            margin-left: 15px;
+        }
     }
     @media only screen and (max-width: 980px){
-        /* .logo{
-        display: hidden;
-        } */
-        padding: 0;
-        .hide-item{
-            transform: translateY(calc(-100% - var(--top)));
-        }
-        .mobile-menu-icon{
-            display: block;
-        }
-        .navItems{
-            --top: 1rem;
-            transition: 0.3s ease transform;
-            background-color: var(--deep-dark);
-            padding: 2rem;
-            width: 90%;
-            max-width: 300px;
-            border-radius: 12px;
-            position: absolute;
-            right: 1rem;
-            top: var(--top); 
+        display: block;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
 
-            .closeNavIcon{
-                display: block;
-                width: 3rem;
-                margin: 0 0 0 auto;
-                cursor: pointer;
-                *{
-                    pointer-events: none;
-                }
-            }
-            li{
-                display: block;
-                margin-bottom: 1rem;
-            }
-        }
+        p{
+            font-family: 'Shrikhand', sans-serif;
 
+            width: 100%;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            position: center;
+            margin-left: auto;
+            margin-right: auto 
+        }
     }
 `;
 
 export default function NavMenu(){
     const [showNav, SetShowNav] = useState(false);
     return(
+        <NavDiv>
+
         <NavMenuStyles>
-            {/* <div>
-            <NavLink to="/"
-                    className="logo"
-                    >
-                    AK
-                    </NavLink>
-            </div> */}
-            <div className="mobile-menu-icon"
-                onClick={() => SetShowNav(!showNav)}
-                role="button"
-                onKeyDown={() => SetShowNav(!showNav)}
-                tabIndex={0}
-                            >
-                <MdMenu/> 
-            </div>
+            <p>Antonina Kacperska</p>
             <ul className={!showNav ? 'navItems hide-item': 'navItems'}>
-                <div className="closeNavIcon" 
-                onClick={() => SetShowNav(!showNav)}
-                role="button"
-                onKeyDown={() => SetShowNav(!showNav)}
-                tabIndex={0}
-                >
-                    <MdClose/>
-                </div>
                 <li>
                     <NavLink to="/"
                             onClick={() => SetShowNav(!showNav)}
@@ -130,40 +143,34 @@ export default function NavMenu(){
                             onKeyDown={() => SetShowNav(!showNav)}
                             tabIndex={0}
                     >
-                        O mnie
+                        Portfolio
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/malarstwo"
+                    <NavLink to="/about"
                         onClick={() => SetShowNav(!showNav)}
                         role="button"
                         onKeyDown={() => SetShowNav(!showNav)}
                         tabIndex={0}
                     >
-                    Malarstwo
+                    O mnie
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/rzezba"
-                            onClick={() => SetShowNav(!showNav)}
-                            role="button"
-                            onKeyDown={() => SetShowNav(!showNav)}
-                            tabIndex={0}
+                    <NavLink to="/contact"
+                        onClick={() => SetShowNav(!showNav)}
+                        role="button"
+                        onKeyDown={() => SetShowNav(!showNav)}
+                        tabIndex={0}
                     >
-                    Rzeźba
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to="/design"
-                            onClick={() => SetShowNav(!showNav)}
-                            role="button"
-                            onKeyDown={() => SetShowNav(!showNav)}
-                            tabIndex={0}
-                    >
-                    Design
+                    Kontakt
                     </NavLink>
                 </li>
             </ul>
         </NavMenuStyles>
+            <span className="line">
+                <h2><span>kategorie</span></h2>
+            </span>
+        </NavDiv>
     )
 }

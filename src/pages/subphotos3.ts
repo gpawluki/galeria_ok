@@ -1,12 +1,12 @@
 const breakpoints = [3840, 2400, 1080, 640, 384, 256, 128, 96, 64, 48];
 
 const unsplashLink = (id: string) =>
-    `https://drive.google.com/uc?export=view&id=${id}`;
+    `../assets/images/portfolio/projekty${id}`;
 
 const subPhotos = [
     // {id: "1QB_yPZ6232vvJ1WTum9W6U6Owz8aK9wQ", width: 894,  height: 956, title: "Rzeźba", description: "Gips  ", main_id: 0}, // des
-    {id: "11Gq3QHGu8CzaAUkXAk1Q11w2WtK8qnNW", width: 1048,height: 1097, title: "ppppr", description: "Gips  ", main_id: 0}, //des
-    {id: "1uJ6UbO9PJ-RBqGekV7ZLJI7PpGia1KSm", width: 957,  height: 506, title: "dddd", description: "Gips  ", main_id: 1}, //des
+    {id: "/zabawka/IMG_4728.JPG", width: 1048,height: 1097, title: "ppppr", description: "Gips  ", main_id: 0}, //des
+    {id: "/zabawka/IMG_4727.JPG", width: 957,  height: 506, title: "dddd", description: "Gips  ", main_id: 0}, //des
 ];
 
 const getMeta = (url: string, cb) => {

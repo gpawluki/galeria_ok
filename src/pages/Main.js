@@ -9,7 +9,7 @@ export default function Main() {
   }, [])
   return (
     <div>
-      <Home />
+      {/* <Home /> */}
       <Works />
     </div>
   );

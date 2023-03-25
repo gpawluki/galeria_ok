@@ -3,106 +3,120 @@ import React from 'react';
 import './page.css';
 import PText from "../component/ptext"
 import Button from "../component/Button"
+import nisio from "../assets/images/nisio.png"
 import ButtonIg from "../component/ButtonIg"
+import { SocialIcon } from 'react-social-icons';
 
 import styled from 'styled-components'
 
-const NisioStyles = styled.div`
-    .nisio{
-        height: 80vh;
-        min-height: 800px;
-        width: 100%;
-        text-align: center;
+const HomeDiv = styled.div`
+    .social{
         display: flex;
+        position: center;
         align-items: center;
-        justify-content: center;
-        position: relative;
+  justify-content: center;
+        margin-left: auto;
+    margin-right: auto;
+        a{
+            position: center;
+        align-items: center;
+         margin: 1rem; 
+    /* margin-right: auto; */ */
+        }
+
     }
-    .nisio__heading{
-        font-size: 2rem;
-        margin-bottom: -4rem;
-        position: relative;
-        span{
-            display: inline-block;
-            width: 100%;
-        }
-        .nisio__name{
-            font-size: 7rem;
-            font-family: "Montserrat Semibold";
-            color: var(--gray-1);
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    .line{
+            display:block; 
+            margin-bottom:4vh;
+            font-family: 'EB Garamond', sans-serif;
 
-        }
     }
-    .nisio__img {
-        max-width: 900px;
-        width: 100%;
-        height: 600px;
-        margin: 0 auto;
-        border: 2px solid var(--white)
+    .line h2{
+            font-family: 'EB Garamond', sans-serif;
+            font-weight: normal;
+            font-size: 1.5rem;
+            text-align:center; 
+            border-bottom:1px solid var(--gray-1); 
+            position:relative; 
     }
-    .nisio__info{
-        margin-top: -18rem;
-    }
-    @media only screen and (max-width: 980px){
-        .nisio{
-            height: 60vh;
-            min-height: 500px;
+    .line h2 span { 
+            background-color: var(--dark-bg); 
+            font-family: 'EB Garamond', sans-serif;
 
-        }
-
-        .container{
-            height: 60vh;
-            min-height: 400px;
-
-        }
-        .nisio__img {
-            height: 50vh;
-            min-height: 400px;
-
-        }
-        .nisio__heading{
-            font-size: 2rem;
-            margin-bottom: -6.5rem;
-            position: relative;
-            .nisio__name{
-                font-size: 5rem;
-                font-family: "Montserrat Semibold";
-                color: var(--white);
-            }
-        }
-        .nisio__info{
-        margin-top: -14em;
-        }
-        
+            position: relative; 
+            top: 10px; 
+            padding: 0 10px;
     }
 `;
 
-const Home = () => {
-	return (
-    <NisioStyles>
-        <div className="nisio">
-            <div className="container">
-                <h1 className="nisio__heading">
-                    <span>Nisio</span>
-                    <span className="nisio__name">Antonina Kacperska</span>
-                </h1>
-                <div className="nisio__img">
-                    <img src='https://drive.google.com/uc?export=view&id=1KLOBgZGPeNrs4juar6rfm0Oh5IqA4OZU'
-                        alt='ddd'
-                    />
-                </div>
-                <div className="nisio__info">
-                    <PText>Nisio robi design Nisio robi design Nii</PText>
-                    <Button btnLink="/prace" btnText="Moje prace"
-                            outline={false} text={true}/>
-                </div>
-            </div>
-            
-        </div>
-        <ButtonIg btnLink="https://www.instagram.com/chelbiv" outline={true}/>
-    </NisioStyles>
-	);
-};
 
-export default Home;
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+    @media only screen and (max-width: 980px){
+    display: block;
+    
+    }
+`;
+
+const Photo = styled.div`
+  flex: 1;
+  margin-right: 2rem;
+  margin-left: 2rem;
+`;
+
+const Image = styled.img`
+  width: 100%;
+  border-radius: 5%;
+  @media only screen and (max-width: 980px){
+      margin-bottom: 2rem;
+  }
+`;
+
+const Text = styled.div`
+  flex: 2;
+`;
+
+const Title = styled.h1`
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'EB Garamond', sans-serif;
+  /* text-align: center; */
+`;
+
+const Description = styled.p`
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+`;
+
+function Home() {
+    return (
+        <HomeDiv>
+            <Wrapper>
+                <Photo>
+                    <Image src={nisio} alt="Profile pic" />
+                </Photo>
+                <Text>
+                    <Title>Antonina Kacperska</Title>
+                    <Description>
+                        Jestem multidyscyplinarną artystką zainteresowaną głównie scenografiami. W swoich pracach lubię wykorzystywać różne materiały.
+                    </Description>
+                    <Description>
+                        Aktualnie studiuje w School of Form na kierunku Wzornictwo, specjalizując się w projektowaniu. W SoF szczególny nacisk kładziony jest na praktykę, naukę różnych technik i stylów.
+                    </Description>
+                </Text>
+            </Wrapper>
+            <span className="line">
+                <h2><span>moje social media</span></h2>
+            </span>
+            <div className="social">
+        <SocialIcon bgColor="#e68a00" url="https://instagram.com/chelbiv"/>
+        <SocialIcon url="https://instagram.com/chelbiv"/>
+
+        </div>
+        </HomeDiv>
+    );
+  }
+  
+  export default Home;
