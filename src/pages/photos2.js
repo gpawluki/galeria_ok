@@ -12,12 +12,12 @@ const unsplashLink = (id) =>
 
 const unsplashPhotos = [
     {id: glowa, width: 300,  height: 300, title: "Głowa", description: "Modelina"},
-    {id: clown, width: 300,  height: 300, title: "Clown", description: "Modelina"},
-    {id: bizu, width: 300,  height: 300, title: "Biżuteria", description: ""},
+    {id: clown, width: 300,  height: 500, title: "Clown", description: "Modelina"},
+    {id: bizu, width: 300,  height: 400, title: "Biżuteria", description: ""},
 
-    {id: ceramika, width: 300,  height: 300, title: "Ceramika", description: "Porcelanowe bąble"},
+    {id: ceramika, width: 600,  height: 350, title: "Ceramika", description: "Porcelanowe bąble"},
     {id: autoportret, width: 300,  height: 300, title: "Autoportret", description: "Odlew gipsowy z woskiem oraz obraz"},
-    {id: totem, width: 300,  height: 300, title: "Totem", description: ""},
+    {id: totem, width: 300,  height: 400, title: "Totem", description: ""},
 
     {id: sztucce, width: 300,  height: 300, title: "Zastawa obiadowa", description: "Furia"},
 

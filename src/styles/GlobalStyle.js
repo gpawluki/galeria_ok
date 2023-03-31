@@ -7,16 +7,17 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   :root{
-    --dark-bg: #262626;
-    --gray-1: #BCB4B4;
+    --dark-bg: #ffe6ff;
+    --gray-1: #000000;
     --deep-dark: #1E1E1E;
     --gray-2: #363636;
     --white : white;
     --black: black;
+    --navbar-bg: rgba(255, 230, 255, 0.98); 
   }
   html{
     font-size: 10px;
-    font-family: 'Helvetica';
+    font-family: 'Consolas';
     background-color: var(--dark-bg);
   }
   ul,li{

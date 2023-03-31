@@ -1,0 +1,2 @@
+// how can i create react page on which there will be art portfolio project image, short description. the photo should be at the middle of pag
+// and the description should be at the bottom of the page?

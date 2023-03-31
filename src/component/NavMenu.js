@@ -8,11 +8,11 @@ const NavDiv = styled.div`
     .line{
             display:block; 
             margin-bottom:4vh;
-            font-family: 'EB Garamond', sans-serif;
+            font-family: 'Consolas', sans-serif;
 
     }
     .line h2{
-            font-family: 'EB Garamond', sans-serif;
+            font-family: 'Consolas', sans-serif;
             font-weight: normal;
             font-size: 1.5rem;
             text-align:center; 
@@ -21,7 +21,7 @@ const NavDiv = styled.div`
     }
     .line h2 span { 
             background-color: var(--dark-bg); 
-            font-family: 'EB Garamond', sans-serif;
+            font-family: 'Consolas', sans-serif;
 
             position: relative; 
             top: 10px; 
@@ -30,13 +30,15 @@ const NavDiv = styled.div`
 `;
 
 const NavMenuStyles = styled.div`
-    /* position:sticky; */
+    position:fixed;
     z-index: 100;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 0;
-    background: var(--dark-bg);
+    /* padding: 1rem 0; */
+    /* background: rgba(var(--dark-bg), 0.5); */
+
+    background: var(--navbar-bg);
     display: flex;
     
     p{
@@ -65,7 +67,7 @@ const NavMenuStyles = styled.div`
         }
         a{
             display: inline-block;
-            font-family: 'EB Garamond', sans-serif;
+            font-family: 'Consolas', sans-serif;
             font-size: 2rem;
 
             padding: 1rem 1rem;
@@ -76,7 +78,7 @@ const NavMenuStyles = styled.div`
             /* margin-top: 20px; */
         }
         .active {
-            color: var(--white);
+            color: var(--gray-2);
         }
     }
 
@@ -134,9 +136,9 @@ export default function NavMenu(){
         <NavDiv>
 
         <NavMenuStyles>
-        <a href="./">
+        {/* <a href="./">
             <p>Antonina Kacperska</p>
-        </a>
+        </a> */}
             <ul className={!showNav ? 'navItems hide-item': 'navItems'}>
                 <li>
                     <NavLink to="/"
@@ -145,17 +147,27 @@ export default function NavMenu(){
                             onKeyDown={() => SetShowNav(!showNav)}
                             tabIndex={0}
                     >
-                        Portfolio
+                        START
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/about"
+                    <NavLink to="/malarstwo"
                         onClick={() => SetShowNav(!showNav)}
                         role="button"
                         onKeyDown={() => SetShowNav(!showNav)}
                         tabIndex={0}
                     >
-                    O mnie
+                    MALARSTWO
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/projekty"
+                        onClick={() => SetShowNav(!showNav)}
+                        role="button"
+                        onKeyDown={() => SetShowNav(!showNav)}
+                        tabIndex={0}
+                    >
+                    PROJEKTY
                     </NavLink>
                 </li>
                 <li>
@@ -165,14 +177,14 @@ export default function NavMenu(){
                         onKeyDown={() => SetShowNav(!showNav)}
                         tabIndex={0}
                     >
-                    Kontakt
+                    KONTAKT
                     </NavLink>
                 </li>
             </ul>
         </NavMenuStyles>
-            <span className="line">
+            {/* <span className="line">
                 <h2><span>kategorie</span></h2>
-            </span>
+            </span> */}
         </NavDiv>
     )
 }

@@ -22,11 +22,11 @@ const HomeDiv = styled.div`
     .line{
             display:block; 
             margin-bottom:4vh;
-            font-family: 'EB Garamond', sans-serif;
+            font-family: 'Consolas', sans-serif;
 
     }
     .line h2{
-            font-family: 'EB Garamond', sans-serif;
+            font-family: 'Consolas', sans-serif;
             font-weight: normal;
             font-size: 1.5rem;
             text-align:center; 
@@ -35,7 +35,7 @@ const HomeDiv = styled.div`
     }
     .line h2 span { 
             background-color: var(--dark-bg); 
-            font-family: 'EB Garamond', sans-serif;
+            font-family: 'Consolas', sans-serif;
 
             position: relative; 
             top: 10px; 

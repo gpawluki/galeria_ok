@@ -6,12 +6,12 @@ import MontserratBold from '../assets/fonts/Montserrat-Bold.ttf';
 
 const Typography = createGlobalStyle`
   @font-face {
-    font-family: 'Helvetica';
+    font-family: 'Consolas';
     /* src: url(${RobotoMonoRegular}); */
     font-style: normal;
   }
   @font-face {
-    font-family: 'EB Garamond Medium';
+    font-family: 'Consolas';
     src: url(${EBGaramond});
     font-style: normal;
   }
@@ -21,15 +21,15 @@ const Typography = createGlobalStyle`
     font-style: normal;
   }
   html{
-    font-family: 'Helvetica';
+    font-family: 'Consolas';
     color: var(--gray-1);
   }
   *{
-    font-family: 'Helvetica';
+    font-family: 'Consolas';
     color: var(--gray-1);
   }
   h1,h2,h3,h4,h5,h6{
-    font-family: 'EB Garamond Medium'
+    font-family: 'Consolas'
   }
 `;
 

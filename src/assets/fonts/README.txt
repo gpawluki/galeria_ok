@@ -1,9 +1,9 @@
-EB Garamond Variable Font
+Consolas Variable Font
 =========================
 
-This download contains EB Garamond as both variable fonts and static fonts.
+This download contains Consolas as both variable fonts and static fonts.
 
-EB Garamond is a variable font with this axis:
+Consolas is a variable font with this axis:
   wght
 
 This means all the styles are contained in these files:
@@ -12,7 +12,7 @@ This means all the styles are contained in these files:
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
-in those cases you can use the static font files for EB Garamond:
+in those cases you can use the static font files for Consolas:
   static/EBGaramond-Regular.ttf
   static/EBGaramond-Medium.ttf
   static/EBGaramond-SemiBold.ttf

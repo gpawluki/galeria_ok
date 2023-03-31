@@ -28,11 +28,11 @@ const HomeDiv = styled.div`
     .line{
             display:block; 
             margin-bottom:4vh;
-            font-family: 'EB Garamond', sans-serif;
+            font-family: 'Consolas', sans-serif;
 
     }
     .line h2{
-            font-family: 'EB Garamond', sans-serif;
+            font-family: 'Consolas', sans-serif;
             font-weight: normal;
             font-size: 1.5rem;
             text-align:center; 
@@ -41,7 +41,7 @@ const HomeDiv = styled.div`
     }
     .line h2 span { 
             background-color: var(--dark-bg); 
-            font-family: 'EB Garamond', sans-serif;
+            font-family: 'Consolas', sans-serif;
 
             position: relative; 
             top: 10px; 
@@ -52,7 +52,13 @@ const HomeDiv = styled.div`
 
 const Wrapper = styled.div`
   display: flex;
+  margin-top: 5rem;
+
+
+  // NEW WITHOUT PHOTO
+  width: 50vw;
   align-items: center;
+  justify: center;
     @media only screen and (max-width: 980px){
     display: block;
     
@@ -61,12 +67,15 @@ const Wrapper = styled.div`
 
 const Photo = styled.div`
   flex: 1;
+  margin-top: 10rem;
+
   margin-right: 2rem;
   margin-left: 2rem;
 `;
 
 const Image = styled.img`
   width: 100%;
+  height: 60vh;
   border-radius: 5%;
   @media only screen and (max-width: 980px){
       margin-bottom: 2rem;
@@ -74,35 +83,40 @@ const Image = styled.img`
 `;
 
 const Text = styled.div`
-  flex: 2;
+align-items: center;
+  flex: 1;
 `;
 
 const Title = styled.h1`
+align-items: top;
+  justify-content: center;
+  text-align: center;
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  font-family: 'EB Garamond', sans-serif;
+  font-family: 'Consolas', sans-serif;
   /* text-align: center; */
 `;
 
 const Description = styled.p`
+align-items:center;
+
   font-size: 1.5rem;
   line-height: 1.5;
   margin-bottom: 1rem;
+  height: 100%;
 `;
 
 function Home() {
     return (
         <HomeDiv>
             <Wrapper>
-                <Photo>
+                {/* <Photo>
                     <Image src={nisio} alt="Profile pic" />
-                </Photo>
+                </Photo> */}
                 <Text>
-                    <Title>Antonina Kacperska</Title>
+                    <Title>O MNIE</Title>
                     <Description>
                         Jestem multidyscyplinarną artystką zainteresowaną głównie scenografiami. W swoich pracach lubię wykorzystywać różne materiały.
-                    </Description>
-                    <Description>
                         Aktualnie studiuje w School of Form na kierunku Wzornictwo, specjalizując się w projektowaniu. W SoF szczególny nacisk kładziony jest na praktykę, naukę różnych technik i stylów.
                     </Description>
                 </Text>
